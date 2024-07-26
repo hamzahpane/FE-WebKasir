@@ -73,7 +73,6 @@ const Navigation = () => {
             <div>
                 <div className='Navbar_container'>
                     <div className='logo'>
-                        {/* <img src={Logo} alt='' height={'50px'} width={'50px'} /> */}
                         <h2> Razz Coffee</h2>
                     </div>
 
@@ -90,7 +89,7 @@ const Navigation = () => {
                         />
                         </div>
                         ) : (
-                            <ul id='container_Header' className={cliked ? "active" : ""}>
+                            <ul id='container_Header' className={cliked ? "#container_Header active" : " #container_Header"}>
                             <li> <NavLink to="/" activeClassName="active-link" exact> <HiMiniHome className='icon' /> Home </NavLink> </li>
                             <li> <NavLink to="/Menu" activeClassName="active-link"> <MdRestaurantMenu className='icon' /> Menu </NavLink> </li>
                             <li> <NavLink to="#" onClick={handleOrderClick}> <IoCartSharp className='icon' />Order </NavLink> </li>
