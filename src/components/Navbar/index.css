@@ -94,7 +94,7 @@
 }
 
 /* mediascreen */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .Navbar_container {
         padding: 20px 20px;
     }

@@ -90,7 +90,7 @@ padding: 1em 2em;
 /* 
 mediascreen */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
     .Box1{
 
