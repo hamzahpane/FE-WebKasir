@@ -9,9 +9,9 @@ return (
         <div className="Background_footer">
             <div className="container_text">
                 <div className="Socialmedia">
-                    <a href="#"><LuInstagram className="icon" /></a>
-                    <a href="#"><IoLogoWhatsapp className="icon" /></a>
-                    <a href="#"><FiGithub className="icon" /></a>
+                    <a ><LuInstagram className="icon" /></a>
+                    <a ><IoLogoWhatsapp className="icon" /></a>
+                    <a ><FiGithub className="icon" /></a>
                 </div>
                 
                 <div className="container_logo">
