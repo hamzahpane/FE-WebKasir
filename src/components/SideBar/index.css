@@ -1,0 +1,32 @@
+
+.List_product{
+    list-style:none ;
+    text-align: start;
+    display: flex;
+    padding: 5px 10px;
+}
+
+.circle-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    align-items: center;
+    border: none;
+    margin-left: 10px;
+    justify-content: center;
+    border: 100px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button_clear{
+ display: flex;
+margin-left: 10px;
+}
+
+.Hapus_order{
+    margin-top: 16px;
+    margin-left: 20px;
+    height: 40px;
+    width:70px ;
+}

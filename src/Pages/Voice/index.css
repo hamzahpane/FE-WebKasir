@@ -1,0 +1,96 @@
+/* index.css */
+
+.HeaderInvoice {
+
+        padding: 10px 40px;
+        display: flex;
+        align-items: center;
+        background-color: black;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000; /* Menentukan stacking order agar tetap di atas konten */
+
+    
+}
+
+
+.HeaderInvoice h2 {
+    color: white;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+
+.HeaderInvoice button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.HeaderInvoice button:focus {
+    outline: none;
+}
+
+.invoice_container {
+    margin: 100px 80px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Mengatur agar tombol berada di ujung kanan */
+    margin-top: 10px; /* Memberikan margin atas agar terpisah dari tabel */
+}
+
+.delete-button {
+    margin-right: 10px; /* Memberikan margin antara tombol Hapus dan Submit */
+}
+
+.toltalMount {
+    
+    border:2px;
+    border-radius: 5px;
+    width: 150px;
+    padding: 2px 0px;
+    background-color: black;
+    color: white; 
+    text-align: center; 
+}
+.toltalMount h3{
+    font-size: 12px;
+}
+/* Responsiveness */
+@media (max-width: 600px) {
+    .HeaderInvoice {
+        padding: 10px;
+    }
+
+    .HeaderInvoice h2 {
+        font-size: 20px;
+    }
+
+    .invoice-table th,
+    .invoice-table td {
+        padding: 6px;
+    }
+}

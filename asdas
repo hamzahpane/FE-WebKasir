@@ -1,0 +1,66 @@
+// // File: pages/Pesanan.jsx
+// import { NavLink } from 'react-router-dom';
+// import React, { useState, useEffect } from "react";
+// import { FaArrowLeft } from "react-icons/fa";
+
+// function Pesanan() {
+//   const [orders, setOrders] = useState([]);
+//   const [deliveryAddress, setDeliveryAddress] = useState(null);
+
+//   useEffect(() => {
+//     const token = localStorage.getItem('Token'); // Sesuaikan dengan cara mendapatkan token Anda
+
+//     const fetchOrders = async () => {
+//       try {
+//         const orderData = await getOrders(token);
+//         setOrders(orderData);
+//       } catch (error) {
+//         console.error("Error fetching orders:", error);
+//       }
+//     };
+
+//     const fetchDeliveryAddress = async () => {
+//       try {
+//         const response = await getAddress(token);
+//         setDeliveryAddress(response.data); 
+//       } catch (error) {
+//         console.error("Error fetching delivery address:", error);
+//       }
+//     };
+
+//     fetchOrders();
+//     fetchDeliveryAddress();
+//   }, []);
+
+//   return (
+//       <>
+//       <div className="Order-Text">
+//         <NavLink to="/Menu"> <FaArrowLeft size={24} color="white" /> </NavLink>
+//         <h2> Pesanan</h2>
+//       </div>
+//     <div >
+//       <h2>Daftar Pesanan</h2>
+//       <ul>
+//         {orders.map((order, index) => (
+//           <li key={index}>
+//             <strong>Nama:</strong> {order.name}, <strong>Harga:</strong> {order.price}, <strong>Jumlah:</strong> {order.quantity}
+//           </li>
+//         ))}
+//       </ul>
+
+//           <div>
+//             <ul>
+//               {deliveryAddress.map((deiver, i) =>(
+//                 <li key={i}>
+//                   <strong>Nama:</strong>{deiver.name}
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+      
+//     </div>
+//   </>
+//   );
+// }
+
+// export default Pesanan;

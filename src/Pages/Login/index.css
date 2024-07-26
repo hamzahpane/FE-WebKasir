@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.Container_Login{
+    overflow: hidden;
+    background-image: url('../../asstes/backgroundCoffe.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.Container_form{
+    margin: 0px 0px; 
+    justify-content: center;
+    align-items: center;
+    background-color: 000000;
+    backdrop-filter:blur(5px);
+    height: 100%;
+}
+
+
+
+.forms_login{
+    padding:40px; 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.forms_login form{
+    box-sizing: border-box;
+    width: 300px;
+    height: 380px;
+    margin: 0px auto;
+    background: white;
+    border-radius: 20px;
+    
+
+}
+
+
+
+
+.forms_login form h1{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #BBAB8C;
+}
+
+.forms_login form h2{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #B2A59B;
+}
+
+.forms_login form label{
+    margin: 10px 20px  5px ;
+    font-size: 12px;
+    font-weight: 400;
+    color: #B2A59B;
+    font-family: "Roboto", sans-serif;;
+}
+
+.forms_login form input{
+    margin: 0px 15px;
+    width: 90%;
+    height: 8%;
+    border: none;
+    outline: none;
+    border: 1px solid  #B2A59B;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 18px ;
+
+}
+
+.Text_login{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    padding: 20px 18px 0px 0px;
+}
+
+.Text_login i{
+    margin-bottom: 10px;
+
+}
+
+.text_forgetPassword{
+
+margin: 10px 0px;
+margin-left: 210px;
+text-decoration: none;
+font-size: 10px;
+font-weight: 500;
+color: #B2A59B;
+}
+
+
+.Button_Login button{
+ margin: 10px 30px;
+    height: 40px;
+    width: 80%;
+    border: none;
+    border-radius: 15px;
+    background: #B2A59B;
+}
+
+.Button_Login button:hover{
+    background: #675D50;
+}
+.Button_Login button h2{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.Button_Login a{
+    font-size: 12px;
+    text-decoration: none;
+    margin: 0px 80px;
+    color: #B2A59B;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.Button_Login a text{
+    color:  #B2A59B;
+    font-weight: 400;
+
+}
+
+.Button_Login a text:hover{
+    color:#675D50;
+    font-weight: 700;
+
+}

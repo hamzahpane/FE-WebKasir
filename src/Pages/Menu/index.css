@@ -1,0 +1,152 @@
+
+.Navbar_Menu_Container{
+    background-color: #333;
+    width: 100%;
+    height: 100px;
+    position: fixed; /* Menetapkan navbar di bagian atas */
+    top: 0;
+    z-index: 1000; /* Menetapkan z-index agar navbar muncul di atas konten */
+    
+}
+
+.Seacrh_bar{
+    background: black;
+    padding: 10px 100px;
+    width: 100%; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.Seacrh_bar input{
+ margin: 0px 10px;
+}
+
+/* BodyContainer */
+
+.Body_MenuContainer{
+    margin-top: 165px;
+    padding: 20px 80px;
+    background: #FEFAF6;
+}
+
+
+
+
+.Category_Container{
+    padding: 30px 0px;
+    display: flex;
+
+}
+
+.Tags_Container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#dropdown-item-button{
+    margin-right: 15px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: start;
+    margin-bottom: 80px;
+  }
+
+.product-card {
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Lebar card */
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    padding: 15px;
+  }
+  
+  .product-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 1rem;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .delete-button, .add-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: #dc3545; /* Warna merah untuk tombol hapus */
+    color: white;
+  }
+  
+  .add-button {
+    background-color: #007bff; /* Warna biru untuk tombol tambahkan */
+    color: white;
+  }
+  
+.delete-button:hover, .add-button:hover {
+    opacity: 0.8;
+  }
+  
+
+
+
+@media (max-width: 600px) {
+    .Seacrh_bar {
+      padding: 8px; /* Mengurangi padding pada layar lebih kecil */
+      padding: 10px 30px;
+    } 
+    .product-card {
+      width: 180px; /* Adjusted width for smaller screens */
+  }
+  .product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .product-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .delete-button, .add-button {
+    padding: 0.2rem 0.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }  
+  .product-price {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 1rem;
+  }  
+}
+
+

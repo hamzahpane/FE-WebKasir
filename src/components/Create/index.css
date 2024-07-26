@@ -1,0 +1,99 @@
+
+/* Container utama */
+
+.HeaderPesanan {
+    padding: 10px 40px;
+    display: flex;
+    align-items: center; /* Menyesuaikan agar konten sejajar vertikal */
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+.HeaderPesanan h2 {
+    color: white;
+    font-size: 24px;
+    margin-top: 8px;
+    margin-left: 10px; /* Memberi jarak antara ikon dan teks */
+}
+
+.HeaderPesanan button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Menyesuaikan agar ikon dan teks di dalam button sejajar */
+    margin-right: 10px; /* Memberi jarak antara ikon dan tepi button */
+}
+
+.HeaderPesanan button:focus {
+    outline: none; /* Menghilangkan focus outline pada button */
+}
+
+
+
+.containerPesanan {
+    
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul Form */
+.containerPesanan h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input fields */
+.inputField {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+.submitButton {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color:black;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .containerPesanan {
+        padding: 10px;
+    }
+    .inputField {
+        font-size: 14px;
+    }
+}

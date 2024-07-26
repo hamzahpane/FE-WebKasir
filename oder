@@ -1,0 +1,147 @@
+// // File OrderPage.jsx
+// import React, { useState, useEffect } from 'react';
+// import { buatOrder } from '../../app/Api/order';
+// import { createOrderitem } from '../../app/Api/cart';
+// import { createSubtotal } from '../../app/Api/subtotal';
+// import { getPay } from '../../app/Api/payment';
+// import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+// import { FaArrowLeft } from 'react-icons/fa';
+// import Form from 'react-bootstrap/Form';
+// import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+// import './index.css';
+
+
+
+// function OrderPage() {
+//     const location = useLocation();
+//     const navigate = useNavigate();
+//     const orderData = location.state && location.state.orderData;
+//     const token = localStorage?.getItem('Token');
+//     const [paymentMethods, setPaymentMethods] = useState([]);
+//     const [selectedPayment, setSelectedPayment] = useState('');
+//     const [showModal, setShowModal] = useState(false);
+//     const [orderId, setOrderId] = useState(null);
+
+//   useEffect(() => {
+//     fetchPaymentMethods();
+//   }, []);
+
+//   const fetchPaymentMethods = async () => {
+//     try {
+//       const response = await getPay();
+//       setPaymentMethods(response);
+//     } catch (error) {
+//       console.error('Error fetching payment methods:', error);
+//     }
+//   };
+
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+      
+//       const resOrderItem = await createOrderitem(orderData.products, token);
+      
+      
+//       const resSubtotal = await createSubtotal({ subtotal: orderData.totalPrice });
+  
+//       const resPayment = await getPay(selectedPayment);
+      
+
+//       // const data = {
+//       //   orderItem : resOrderItem , 
+//       //   subtotal :resSubtotal,  
+//       //   payment : resPayment,
+//       // }
+
+//       // setOrderId(data);
+      
+//       setShowModal(true);
+//     } catch (error) {
+//       console.error('Error:', error.message);
+//     }
+//   };
+
+  
+//   const handleContinue = async () => {
+  
+//     try {
+//       if (orderId) {
+      
+//         const resOrder = await buatOrder([orderId] , token);
+//         console.log('Order berhasil dibuat:', resOrder);
+//         navigate('/Pesanan');
+//       } else {
+//         console.error('Error: ID order tidak ditemukan');
+//       }
+//     } catch (error) {
+//       console.error('Error:', error.message);
+//     }
+//   };
+
+//   const handleCloseModal = () => {
+//     setShowModal(false);
+//     navigate('/Pesanan');
+//   };
+
+//   return (
+//     <>
+//       <div className="Order-Text">
+//         <NavLink to="/Menu" className="nav-link">
+//           <FaArrowLeft size={24} color="white" />
+//         </NavLink>
+//         <h2 className="navbar-title">Detail Pesanan</h2>
+//       </div>
+
+//       <div>
+//         <h3>Daftar Pesanan</h3>
+//         <ul>
+//           {orderData &&
+//             orderData.products.map((product, index) => (
+//               <li key={index}>
+//                 <p>Nama: {product.name}</p>
+//                 <p>Harga: {product.price}</p>
+//                 <p>Jumlah: {product.quantity}</p>
+//               </li>
+//             ))}
+//         </ul>
+
+//         <Form.Select onChange={(e) => setSelectedPayment(e.target.value)}>
+//           <option>Pilih Metode Pembayaran</option>
+//           {paymentMethods.map((payment) => (
+//             <option key={payment._id} value={payment.name}>
+//               {payment.name}
+//             </option>
+//           ))}
+//         </Form.Select>
+
+//         {orderData && (
+//           <>
+//             <p>Total Harga: {orderData.totalPrice}</p>
+//             <button onClick={handleSubmit}>Pesan Sekarang</button>
+//           </>
+//         )}
+//       </div>
+
+//       <Modal show={showModal} onHide={handleCloseModal}>
+//         <Modal.Header closeButton>
+//         <Modal.Title>Pesanan Telah Ditambahkan</Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           Pesanan Anda telah berhasil ditambahkan.
+//         </Modal.Body>
+//         <Modal.Footer>
+//           <Button variant="secondary" onClick={handleCloseModal}>
+//             Tutup
+//           </Button>
+//           <Button variant="primary" onClick={handleContinue}>
+//             s
+//           </Button>
+//         </Modal.Footer>
+//       </Modal>
+//     </>
+//   );
+// }
+
+// export default OrderPage;
