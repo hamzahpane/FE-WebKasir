@@ -34,7 +34,7 @@ function Index() {
         e.preventDefault();
         try {
             const responseData = await sendRequest(input.email, input.password);
-            
+            console.log(responseData);
             if (!responseData.err) {
                 history("../Menu");
                 console.log(responseData);
@@ -77,8 +77,7 @@ function Index() {
                         <button type="submit"> <h2> Login  </h2> </button>
                         <NavLink href="Nav_regis" to="../Regis">tidak punya akun? <text>Daftar</text> </NavLink>
                     </div>
-                    {/* {error && <div> <h1>{error}</h1> </div>} */}
-                </form>
+                    </form>
             
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
