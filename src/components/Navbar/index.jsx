@@ -106,13 +106,13 @@ const Navigation = () => {
                             <button> <NavLink to="../login"> Login </NavLink> </button>
                         )}
 
-                        {token && (
+                        
                         <div id="Mobile">
                         <i id="bar" className={cliked ? 'menu-icon' : 'close-icon'} onClick={() => setClicked(!cliked)}>
                             {cliked ? <AiOutlineClose color="white" /> : <FaBars color="white" />}
                         </i>
                         </div>
-                        )}
+                    
                     </div>
                 </div>
             </div>
