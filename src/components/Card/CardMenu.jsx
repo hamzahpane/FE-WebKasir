@@ -8,7 +8,7 @@ function CardMenu() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/products');
+                const response = await axios.get('http://203.194.113.156/api/products');
                 setProducts(response.data.data);
             } catch (error) {
                 console.error('Error fetching products:', error);
@@ -23,7 +23,7 @@ function CardMenu() {
             {products.map(product => (
                 <Col key={product._id}>
                     <Card style={{ width: '18rem' }}>
-                        <Card.Img src={`http://localhost:4000/images/products/${product.image_url}`} style={{ width: '100%', height: '200px' }} />
+                        <Card.Img src={`http://203.194.113.156/images/products/${product.image_url}`} style={{ width: '100%', height: '200px' }} />
                         <Card.Body>
                             <Card.Title>{product.name}</Card.Title>
                             <Card.Text>

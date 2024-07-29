@@ -46,7 +46,7 @@ const Menu = () => {
     };
 
     const tags = ['Kopi&Teh', 'Juice', 'Milkshake', 'Mie', 'Nasi', 'Snack'
-      , 'Dimsum', 'ManualBrew','NonCoffe'];
+      , 'Dimsum', 'ManualBrew','NonCoffe' , 'Mocktail'];
 
     const handleAddProduct = (product) => {
         const isProductAdded = selectedProducts.some((selectedProduct) => selectedProduct._id === product._id);
@@ -65,7 +65,7 @@ const Menu = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            const response = await axios.delete(`http://localhost:4000/api/products/${productId}`);
+            const response = await axios.delete(`http://203.194.113.156/api/products/${productId}`);
             if (response.status === 200) {
                 setProducts(products.filter((product) => product._id !== productId));
                 setNotification({ show: true, message: 'Produk berhasil dihapus.' });
@@ -139,7 +139,7 @@ const Menu = () => {
                         <div className="product-list">
                             {products.map((product) => (
                                 <div key={product._id} className="product-card">
-                                    <img src={`http://localhost:4000/images/products/${product.image_url}`} alt={product.name} className="product-image" />
+                                    <img src={`http://203.194.113.156/images/products/${product.image_url}`} alt={product.name} className="product-image" />
                                     <div className="product-details">
                                         <h3 className="product-title">{product.name}</h3>
                                         <p className="product-price">Rp.{product.price}</p>

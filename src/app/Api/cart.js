@@ -3,7 +3,7 @@ import axios from "axios";
 export async function createItem( payload , token) {
     try {
         const response = await axios
-        .post(`http://localhost:4000/api/ordersItem`, payload, {
+        .post(`http://203.194.113.156/api/ordersItem`, payload, {
             headers: {
             Authorization: `${token}`,
             }
@@ -19,7 +19,7 @@ export async function createItem( payload , token) {
 
     export async function getItem(token) {
         try {
-            const response = await axios.get(`http://localhost:4000/api/getOrdersItem`, {
+            const response = await axios.get(`http://203.194.113.156/api/getOrdersItem`, {
                 headers: {
                     Authorization: `Bearer ${token}`, // sesuaikan dengan format Authorization yang benar
                 }

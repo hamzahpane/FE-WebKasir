@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function getAddress(token) {
    
-   return await axios.get(`http://localhost:4000/api/deliveryAddres`, {
+   return await axios.get(`http://203.194.113.156/api/deliveryAddres`, {
       headers: {
       Authorization: `${token}`
    }
@@ -14,7 +14,7 @@ export async function getAddressById(addressId) {
    ? JSON.parse(localStorage.getItem("aut"))
    : {};
 
-   return await axios.get(`http://localhost:4000/api/deliveryAddres/${addressId}`, {
+   return await axios.get(`http://203.194.113.156/api/deliveryAddres/${addressId}`, {
    headers: {
       Authorization: `${token}`
       }
@@ -23,7 +23,7 @@ export async function getAddressById(addressId) {
 
 export async function createAddress(payload, token) {
    
-   return await axios.post(`http://localhost:4000/api/deliveryAddres`, payload, {
+   return await axios.post(`http://203.194.113.156/api/deliveryAddres`, payload, {
       headers: {
          Authorization: `${token}`
       }

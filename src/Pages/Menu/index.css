@@ -119,13 +119,17 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .Seacrh_bar {
       padding: 8px; /* Mengurangi padding pada layar lebih kecil */
       padding: 10px 30px;
     } 
+
+    .Body_MenuContainer{
+      padding: 20px 30px;
+  }
     .product-card {
-      width: 180px; /* Adjusted width for smaller screens */
+      width: 150px; /* Adjusted width for smaller screens */
   }
   .product-image {
     width: 100%;
@@ -139,6 +143,7 @@
   .delete-button, .add-button {
     padding: 0.2rem 0.2rem;
     border: none;
+    font-size: 0.7rem;
     border-radius: 4px;
     cursor: pointer;
   }  

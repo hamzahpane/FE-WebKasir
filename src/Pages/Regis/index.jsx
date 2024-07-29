@@ -31,20 +31,26 @@ function Index () {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            console.log("Data yang akan didaftarkan:", data.username, data.password);
-            await Register(data);
-            if (!data?.error) {
-                navigate("../Login");
+            console.log("Data yang akan didaftarkan:", data);
+            const response = await Register(data);
+            console.log(response);
+            if (response.status === 200) {
+                // Asumsi status 200 berarti registrasi berhasil
+                navigate(""); // Arahkan ke halaman utama atau halaman login
             } else {
-                handleShow('error');
+                // Jika status tidak 200, berarti ada masalah
+                handleShow();
             }
-            console.log("Respon setelah pendaftaran:", data.message); 
+            console.log("Respon setelah pendaftaran:", response.data); 
         } catch (error) {
+            console.error("Terjadi kesalahan:", error);
             if (error.response && error.response.status === 409) {
-                return; 
+                // Menampilkan modal jika terjadi error dengan status 409
+                handleShow();
             }
         }
     };
+    
     
     return (
         <>

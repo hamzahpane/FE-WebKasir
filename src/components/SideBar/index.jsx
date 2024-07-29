@@ -92,7 +92,8 @@ const Sidebar = ({ show, handleClose }) => {
       })),
       totalPrice: calculateTotalPrice(),
     };
-
+    
+    console.log(orderdata);
     try {
       const resOrderItem = await createItem(orderdata, token);
       console.log('Order item created successfully:', resOrderItem);
@@ -124,7 +125,7 @@ const Sidebar = ({ show, handleClose }) => {
             Tutup
           </Button>
           {orderStatus === 'success' && (
-             <NavLink to="/Order"> <Button variant="secondary">
+            <NavLink to="/Order"> <Button variant="secondary">
               Lanjut
             </Button>
             </NavLink>
