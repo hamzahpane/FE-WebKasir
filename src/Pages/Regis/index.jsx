@@ -36,7 +36,7 @@ function Index () {
             console.log(response);
             if (response.status === 200) {
                 // Asumsi status 200 berarti registrasi berhasil
-                navigate(""); // Arahkan ke halaman utama atau halaman login
+                navigate("/login"); // Arahkan ke halaman utama atau halaman login
             } else {
                 // Jika status tidak 200, berarti ada masalah
                 handleShow();
